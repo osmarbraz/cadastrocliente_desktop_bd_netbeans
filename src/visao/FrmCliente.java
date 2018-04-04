@@ -20,13 +20,13 @@ import java.util.Iterator;
 
 /**
  * Classe que implementa a interface principal do sistema.
- *
- * @version 1.0
  */
 public class FrmCliente extends JFrame {
 
+    //Container da janela
     private JPanel contentPane;
 
+    //Atributos de rótulo e caixas de texto
     private JLabel jLClienteId;
     private JTextField jTClienteId;
     private JLabel jLNome;
@@ -34,6 +34,7 @@ public class FrmCliente extends JFrame {
     private JLabel jLCpf;
     private JTextField jTCpf;
 
+    //Botões da janela
     private JButton jBSalvar;
     private JButton jBListar;
     private JButton jBAlterar;
@@ -57,7 +58,7 @@ public class FrmCliente extends JFrame {
         //Recupero o container da janela
         contentPane = (JPanel) this.getContentPane();
         
-        //Instancio os componentes
+        //Instancia os componentes
         jLClienteId = new JLabel();
         jTClienteId = new JTextField();
         jLNome = new JLabel();
@@ -122,7 +123,7 @@ public class FrmCliente extends JFrame {
         jBSair.setBounds(new Rectangle(200, 189, 90, 27));
         jBSair.setText("Sair");
 
-        //Adiciono os componentes no container	
+        //Adiciona os componentes no container	
         contentPane.add(jLClienteId, null);
         contentPane.add(jTClienteId, null);
         contentPane.add(jLNome, null);
@@ -145,6 +146,8 @@ public class FrmCliente extends JFrame {
     /**
      * Método para mostrar mensagem.
      * 
+     * Emcapsula o JOptionPane.
+     * 
      * @param mensagem Mensagem a ser exibida.
      */
     public void mostrarMensagem(String mensagem) {
@@ -154,6 +157,7 @@ public class FrmCliente extends JFrame {
     /**
      * Método que define o evento do botao fechar da janela.
      */
+    @Override
     protected void processWindowEvent(WindowEvent e) {
         super.processWindowEvent(e);
         if (e.getID() == WindowEvent.WINDOW_CLOSING) {
@@ -313,10 +317,10 @@ public class FrmCliente extends JFrame {
     }
 
     /**
-     * Metodo para realizar a limpeza dos campos do formulario
+     * Metodo para realizar a limpeza dos campos do formulário
      */
     void jBLimpar_actionPerformed(ActionEvent e) {
-        //Limpa as caixas de texto do formulario
+        //Limpa as caixas de texto do formulário
         jTClienteId.setText("");
         jTNome.setText("");
         jTCpf.setText("");

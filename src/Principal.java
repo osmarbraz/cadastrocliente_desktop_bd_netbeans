@@ -4,7 +4,7 @@ import visao.FrmCliente;
 /**
  * Classe que possui a operação main da aplicação. 
  * 
- * Server para dar inicio ao sistema.
+ * Serve para dar inicio ao sistema.
  * 
  * @version 1.0
  */
