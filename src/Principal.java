@@ -1,0 +1,24 @@
+
+import visao.FrmCliente;
+
+/**
+ * Classe que possui a operação main da aplicação. 
+ * 
+ * Server para dar inicio ao sistema.
+ * 
+ * @version 1.0
+ */
+public class Principal { 
+
+	/**
+	 * Inicia a aplicação.
+	 * 
+	 * @param args    args
+	 */
+	public static void main(String[] args) {
+		//Instancio a classe da janela do cadastro de cliente
+		FrmCliente frmCliente = new FrmCliente();
+		//Deixo a janela visivel
+		frmCliente.setVisible(true);
+	}    
+}
