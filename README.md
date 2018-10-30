@@ -2,9 +2,7 @@ Sistema de Cadastro de Clientes para Desktop
 
 Está é uma versão para a IDE NetBeans
 
-O projeto no NetBeans deve ser chamado SistemaCC1NetBeans.
-
-Crie o banco de dados antes de executar o projeto, as especificações das tabelas estão no arquivo Banco.sql
+Crie o banco de dados antes de executar o projeto, as especificações das tabelas estão no arquivo banco.sql
 
 Os dados de configuração(Servidor, Database, Usuario, Senha) da integração do java com o banco de dados estão no arquivo src/DadosBanco.java 
 
