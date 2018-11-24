@@ -1,4 +1,4 @@
-#Sistema de Cadastro de Clientes para Desktop em Banco de Dados
+# Sistema de Cadastro de Clientes para Desktop em Banco de Dados
 Este programa possui diversas classes organizada nos pacotes visão, modelo e dao.<br>
 Toda iteração com banco de dados é tratada diretamente pelo DAO(Data Access Object.<br>
 Os dados de configuração(Servidor, Database, Usuario, Senha) da integração do java com o banco de dados estão no arquivo src/DadosBanco.java.<br>
