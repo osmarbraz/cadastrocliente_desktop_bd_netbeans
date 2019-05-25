@@ -1,4 +1,4 @@
-# Sistema de Cadastro de Clientes para Desktop em Banco de Dados
+# Sistema de Cadastro de Clientes para Desktop em Banco de Dados para a IDE NetBeans
  - Está é uma versão do sistema para a IDE NetBeans. O projeto no NetBeans deve ser chamado cadastrocliente_desktop_bd.<br>
  - Este programa possui diversas classes organizada nos pacotes visão, modelo e dao.<br>
  - Toda iteração com banco de dados é tratada diretamente pelo DAO(Data Access Object).<br>
