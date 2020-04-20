@@ -1,7 +1,7 @@
 # Sistema de Cadastro de Clientes para Desktop em Banco de Dados para a IDE NetBeans
- - Está é uma versão do sistema para a IDE NetBeans. O projeto no NetBeans deve ser chamado cadastrocliente_desktop_bd.<br>
- - Este programa possui diversas classes organizada nos pacotes visão, modelo e dao.<br>
- - Toda iteração com banco de dados é tratada diretamente pelo DAO(Data Access Object).<br>
- - Os dados de configuração(Servidor, Database, Usuario, Senha) da integração do java com o banco de dados estão no arquivo src/dao/DadosBanco.java.<br>
- - Crie o banco de dados no MySQL antes de executar o projeto, as especificações das tabelas estão no arquivo banco.sql.<br>
- - A pasta src contêm os fontes do projeto e na pasta  lib o driver jdbc para MySQL.<br>
+ - EstÃ¡ Ã© uma versÃ£o do sistema para a IDE NetBeans. O projeto no NetBeans deve ser chamado cadastrocliente_desktop_bd.<br>
+ - Este programa possui diversas classes organizada nos pacotes visÃ£o, modelo e dao.<br>
+ - Toda iteraÃ§Ã£o com banco de dados Ã© tratada diretamente pelo DAO(Data Access Object).<br>
+ - Os dados de configuraÃ§Ã£o(Servidor, Database, Usuario, Senha) da integraÃ§Ã£o do java com o banco de dados estÃ£o no arquivo src/dao/DadosBanco.java.<br>
+ - Crie o banco de dados no MySQL antes de executar o projeto, as especificaÃ§Ãµes das tabelas estï¿½o no arquivo banco.sql.<br>
+ - A pasta src contÃªm os fontes do projeto e na pasta  lib o driver jdbc para MySQL.<br>

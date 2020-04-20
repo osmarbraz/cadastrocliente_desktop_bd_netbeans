@@ -57,7 +57,7 @@ public class FrmCliente extends JFrame {
     private void inicializar() {
         //Recupero o container da janela
         contentPane = (JPanel) this.getContentPane();
-        
+
         //Instancia os componentes
         jLClienteId = new JLabel();
         jTClienteId = new JTextField();
@@ -76,10 +76,10 @@ public class FrmCliente extends JFrame {
 
         //Deixo nulo o layout do container
         contentPane.setLayout(null);
-        
+
         //Defino o tamanho da janela
         this.setSize(new Dimension(310, 250));
-        
+
         //Defino o titulo da janela
         this.setTitle("Cadastro de Cliente");
         this.addWindowListener(new WindowAdapter() {
@@ -87,7 +87,7 @@ public class FrmCliente extends JFrame {
                 System.exit(0);
             }
         });
-        
+
         //Tamanho e configuracao dos componentes
         jLClienteId.setBounds(new Rectangle(11, 11, 60, 17));
         jTClienteId.setBounds(new Rectangle(11, 28, 70, 21));
@@ -145,9 +145,9 @@ public class FrmCliente extends JFrame {
 
     /**
      * Método para mostrar mensagem.
-     * 
+     *
      * Emcapsula o JOptionPane.
-     * 
+     *
      * @param mensagem Mensagem a ser exibida.
      */
     public void mostrarMensagem(String mensagem) {
@@ -267,7 +267,7 @@ public class FrmCliente extends JFrame {
      * Metodo para realizar a consulta no banco de dados
      */
     void jBConsultar_actionPerformed(ActionEvent e) {
-         //Pergunto ao usuário qual o id a ser consultado
+        //Pergunto ao usuário qual o id a ser consultado
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser consultado"));
         //Instancio o DAO
         ClienteDAO clienteDAO = new ClienteDAOMySQL();
@@ -337,8 +337,8 @@ public class FrmCliente extends JFrame {
         //Coloca um painel de rolagem ao textArea
         JScrollPane painelRolagem = new JScrollPane(textArea);
         String linha = "";
-         //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();        
+        //Instancio o DAO
+        ClienteDAO clienteDAO = new ClienteDAOMySQL();
         //Recupro um interador com uma lista de todos clientes no banco de dados	        
         Iterator it = clienteDAO.retrieveAll().iterator();
         //Percorro a lista de clientes enquanto existir cliente
