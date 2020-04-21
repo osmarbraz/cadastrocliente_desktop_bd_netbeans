@@ -1,8 +1,9 @@
 package visao;
 
+import dao.DAOFactory;
 import modelo.Cliente;
-import dao.ClienteDAO;
-import dao.ClienteDAOMySQL;
+import dao.cliente.ClienteDAO;
+import dao.cliente.ClienteDAOMySQL;
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.WindowEvent;
@@ -227,8 +228,8 @@ public class FrmCliente extends JFrame {
         cliente.setNome(jTNome.getText());
         cliente.setCpf(jTCpf.getText());
 
-        //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();
+        //Recupera o DAO
+        ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
 
         //Realiza alteração do cliente
         if (clienteDAO.save(cliente)) {
@@ -249,8 +250,8 @@ public class FrmCliente extends JFrame {
     void jBAlterar_actionPerformed(ActionEvent e) {
         //Pergunto ao usuário qual o id a ser alterado
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser alterado"));
-        //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();
+        //Recupera o DAO
+        ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
         Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
@@ -269,8 +270,8 @@ public class FrmCliente extends JFrame {
     void jBConsultar_actionPerformed(ActionEvent e) {
         //Pergunto ao usuário qual o id a ser consultado
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser consultado"));
-        //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();
+        //Recupera o DAO
+        ClienteDAO clienteDAO  = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
         Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
@@ -290,8 +291,8 @@ public class FrmCliente extends JFrame {
     ) {
         //Pergunto ao usuário qual o id a ser excluído
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser excluído"));
-        //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();
+        //Recupera o DAO
+        ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
         Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
@@ -337,8 +338,8 @@ public class FrmCliente extends JFrame {
         //Coloca um painel de rolagem ao textArea
         JScrollPane painelRolagem = new JScrollPane(textArea);
         String linha = "";
-        //Instancio o DAO
-        ClienteDAO clienteDAO = new ClienteDAOMySQL();
+        //Recupera o DAO
+        ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupro um interador com uma lista de todos clientes no banco de dados	        
         Iterator it = clienteDAO.retrieveAll().iterator();
         //Percorro a lista de clientes enquanto existir cliente
