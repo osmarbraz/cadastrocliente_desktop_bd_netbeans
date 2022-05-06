@@ -1,23 +1,22 @@
 package visao;
 
 import dao.DAOFactory;
-import modelo.Cliente;
 import dao.cliente.ClienteDAO;
-import dao.cliente.ClienteDAOMySQL;
 import java.awt.Dimension;
 import java.awt.Rectangle;
-import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
 import javax.swing.JOptionPane;
-import java.util.Iterator;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import modelo.Cliente;
 
 /**
  * Classe que implementa a interface principal do sistema.
@@ -271,7 +270,7 @@ public class FrmCliente extends JFrame {
         //Pergunto ao usuário qual o id a ser consultado
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser consultado"));
         //Recupera o DAO
-        ClienteDAO clienteDAO  = DAOFactory.getClienteDAO();
+        ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
         Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
         //Verifico se o cliente foi encontrado

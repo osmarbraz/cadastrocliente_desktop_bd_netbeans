@@ -125,7 +125,7 @@ public class Conexao {
      */
     public void conectar() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");            
+            Class.forName("com.mysql.cj.jdbc.Driver");
             String URL = "jdbc:mysql://" + getServidor() + ":3306" + "/" + getDataBase() + "?useSSL=false&useTimezone=true&serverTimezone=UTC";
             setCon(DriverManager.getConnection(URL, getUsuario(), getSenha()));
             setConectado(true);
