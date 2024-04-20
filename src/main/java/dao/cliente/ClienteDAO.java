@@ -11,11 +11,11 @@ import modelo.Cliente;
  */
 public interface ClienteDAO {
 
-    public boolean save(Cliente cliente);
+    public boolean salvar(Cliente cliente);
 
-    public Cliente retrieveByPk(int clienteId);
+    public Cliente consultarPK(int clienteId);
 
-    public boolean delete(int cienteId);
+    public boolean apagarPK(int cienteId);
 
-    public List retrieveAll();
+    public List consultarTudo();
 }

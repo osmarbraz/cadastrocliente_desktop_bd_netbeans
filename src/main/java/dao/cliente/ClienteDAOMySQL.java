@@ -24,7 +24,7 @@ public class ClienteDAOMySQL implements ClienteDAO {
      * @return Verdadeiro ou falso se conseguiu fazer o salvamento.
      */
     @Override
-    public boolean save(Cliente cliente) {
+    public boolean salvar(Cliente cliente) {
         boolean resultado = false;
         //Instancia a conexão com o banco de dados
         Conexao MinhaConexao = new Conexao(DadosBanco.SERVIDOR, DadosBanco.DATABASE, DadosBanco.USUARIO, DadosBanco.SENHA);
@@ -77,7 +77,7 @@ public class ClienteDAOMySQL implements ClienteDAO {
      * @return Uma lista com todos os objetos cliente do banco de dados.
      */
     @Override
-    public List retrieveAll() {
+    public List consultarTudo() {
         Cliente cliente = null;
         //Instancia a conexão com o banco de dados
         Conexao MinhaConexao = new Conexao(DadosBanco.SERVIDOR, DadosBanco.DATABASE, DadosBanco.USUARIO, DadosBanco.SENHA);
@@ -134,7 +134,7 @@ public class ClienteDAOMySQL implements ClienteDAO {
      * @return Verdadeiro ou falso se conseguiu fazer a exclusão.
      */
     @Override
-    public boolean delete(int clienteId) {
+    public boolean apagarPK(int clienteId) {
         boolean resultado = false;
         //Instancia a conexão com o banco de dados
         Conexao MinhaConexao = new Conexao(DadosBanco.SERVIDOR, DadosBanco.DATABASE, DadosBanco.USUARIO, DadosBanco.SENHA);
@@ -179,7 +179,7 @@ public class ClienteDAOMySQL implements ClienteDAO {
      * cliente.
      */
     @Override
-    public Cliente retrieveByPk(int clienteId) {
+    public Cliente consultarPK(int clienteId) {
         //Objeto a ser retornado
         Cliente cliente = null;
         //Instancia a conexão com o banco de dados

@@ -78,7 +78,7 @@ public class FrmCliente extends JFrame {
         contentPane.setLayout(null);
 
         //Defino o tamanho da janela
-        this.setSize(new Dimension(310, 250));
+        this.setSize(new Dimension(310, 270));
 
         //Defino o titulo da janela
         this.setTitle("Cadastro de Cliente");
@@ -231,7 +231,7 @@ public class FrmCliente extends JFrame {
         ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
 
         //Realiza alteração do cliente
-        if (clienteDAO.save(cliente)) {
+        if (clienteDAO.salvar(cliente)) {
             //Verifica se é um cliente novo ou uma alteração
             if (jTClienteId.getText().equals("")) {
                 mostrarMensagem("Cliente inserido com sucesso!");
@@ -252,7 +252,7 @@ public class FrmCliente extends JFrame {
         //Recupera o DAO
         ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
-        Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
+        Cliente cliente = clienteDAO.consultarPK(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
         if (cliente != null) {
             jTClienteId.setText(cliente.getClienteId() + "");
@@ -272,7 +272,7 @@ public class FrmCliente extends JFrame {
         //Recupera o DAO
         ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
-        Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
+        Cliente cliente = clienteDAO.consultarPK(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
         if (cliente != null) {
             jTClienteId.setText(cliente.getClienteId() + "");
@@ -293,7 +293,7 @@ public class FrmCliente extends JFrame {
         //Recupera o DAO
         ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupero o cliente com o id
-        Cliente cliente = clienteDAO.retrieveByPk(clienteIdExcluir);
+        Cliente cliente = clienteDAO.consultarPK(clienteIdExcluir);
         //Verifico se o cliente foi encontrado
         if (cliente != null) {
             jTClienteId.setText(cliente.getClienteId() + "");
@@ -302,7 +302,7 @@ public class FrmCliente extends JFrame {
             Object[] options = {"Sim", "Não"};
             int opcao = JOptionPane.showOptionDialog(null, "Voce deseja realmente excluir?", "Exclusão", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
             if (opcao == JOptionPane.YES_OPTION) {
-                if (clienteDAO.delete(clienteIdExcluir)) {
+                if (clienteDAO.apagarPK(clienteIdExcluir)) {
                     mostrarMensagem("Exclusão realizada com sucesso!");
                 } else {
                     mostrarMensagem("Exclusão não realizada!");
@@ -340,7 +340,7 @@ public class FrmCliente extends JFrame {
         //Recupera o DAO
         ClienteDAO clienteDAO = DAOFactory.getClienteDAO();
         //Recupro um interador com uma lista de todos clientes no banco de dados	        
-        Iterator it = clienteDAO.retrieveAll().iterator();
+        Iterator it = clienteDAO.consultarTudo().iterator();
         //Percorro a lista de clientes enquanto existir cliente
         while (it.hasNext()) {
             //Recupero um cliente da lista	

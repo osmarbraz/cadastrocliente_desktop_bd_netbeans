@@ -14,4 +14,4 @@
 ## Arquivos
 
 - *.sql - Script do banco de daddos.
-- build.xml - Arquivo de configuração da ferramenta de automação Ant.
+- pom.xml - Arquivo de configurção da ferramenta de automação Maven.
