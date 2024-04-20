@@ -2,6 +2,8 @@ package visao;
 
 import dao.DAOFactory;
 import dao.cliente.ClienteDAO;
+import modelo.Cliente;
+
 import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -16,7 +18,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import modelo.Cliente;
 
 /**
  * Classe que implementa a interface principal do sistema.
@@ -286,8 +287,7 @@ public class FrmCliente extends JFrame {
     /**
      * Metodo para realizar a exclusao no banco de dados
      */
-    void jBExcluir_actionPerformed(ActionEvent e
-    ) {
+    void jBExcluir_actionPerformed(ActionEvent e) {
         //Pergunto ao usuário qual o id a ser excluído
         int clienteIdExcluir = Integer.parseInt(JOptionPane.showInputDialog("Digite o Id do cliente a ser excluído"));
         //Recupera o DAO

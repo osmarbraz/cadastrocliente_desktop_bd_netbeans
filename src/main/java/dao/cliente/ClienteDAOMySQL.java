@@ -2,13 +2,14 @@ package dao.cliente;
 
 import dao.Conexao;
 import dao.DadosBanco;
+import modelo.Cliente;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Cliente;
 
 /**
  * Implementação em MySQL para a interface ClientaDAO.
