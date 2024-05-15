@@ -42,7 +42,7 @@ public class Cliente {
     /**
      * Retorna o id de um cliente.
      *
-     * @return Um inteido com o id do cliente.
+     * @return Um inteiro com o id do cliente.
      */
     public int getClienteId() {
         return clienteId;
